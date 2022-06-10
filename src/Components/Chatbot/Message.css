@@ -1,4 +1,4 @@
-/* #messages .message {
+#messages .message {
     clear: both;
     overflow: hidden;
     margin-bottom: 20px;
@@ -73,4 +73,4 @@
 #messages .message .text_wrapper .text {
     font-size: 18px;
     font-weight: 300;
-} */
+}

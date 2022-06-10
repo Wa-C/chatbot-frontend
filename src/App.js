@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase/app';
 import firebaseConfig from './Components/FirebaseAuth/Firebase.config';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { useState } from 'react';
+import Chatbot from './Components/Chatbot/Chatbot';
 initializeApp(firebaseConfig);
 
 
@@ -12,7 +13,8 @@ function App() {
     isSignedIn: false,
     name: '',
     email:'',
-    photo: ''
+    photo: '',
+    password: ''
   });
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
@@ -63,20 +65,54 @@ setUser(signedOutUser)
   console.log(error);
     });
   }
+  const handleSubmit = () => {
+     console.log('clicked');
+   }
+   const handleBlur = (e) => {
+    let isFormValid = true;
+    if (e.target.name === 'email') {
+        isFormValid = /\S+@\S+\.\S+/.test(e.target.value);
+
+    }
+    if (e.target.name === 'password') {
+        const isPasswordValid = e.target.value.length > 6;
+        const passwordHasNumber = /\d{1}/.test(e.target.value);
+        isFormValid = isPasswordValid && passwordHasNumber;
+    }
+    if (e.target.name === 'name') {
+        const isName = e.target.value;
+        isFormValid = isName;
+    }
+    if (isFormValid) {
+      const newUserInfo = { ...user };
+      newUserInfo[e.target.name] = e.target.value;
+      setUser(newUserInfo);
+  }
+
+   }
   return (
-    <>
+    <div className="App">
     {
-      user.isSignedIn ? <button onClick={handleSignOut}> Sign Out</button> :
-      <button onClick={handleSignIn}> Sign in</button>
+      user.isSignedIn ? <button type="button" className="btn btn-primary" onClick={handleSignOut}> Sign Out</button> :
+      <button type="button" className="btn btn-primary" onClick={handleSignIn}> Sign in</button>
     }
     {
       user.isSignedIn && <div>
         <p> Welcome, {user.name}</p>
-        <p> Your Email :  {user.name}</p>
+        <p> Your Email :  {user.email}</p>
         
       </div>
     }
-    </>
+    <h1>Our Own Authentication</h1>
+    <form onSubmit={handleSubmit}>
+      <input type='text' name='email' onBlur={handleBlur} placeholder='Your Email Address' required />
+      <br/>
+      <input type='password' name='password' onBlur={handleBlur} placeholder="Your Password" required />
+      <br/>
+      <input type="submit" value="Submit"/>
+    </form>
+    <Chatbot />
+    </div>
   );
 }
 

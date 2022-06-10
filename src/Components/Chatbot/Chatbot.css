@@ -1,4 +1,4 @@
-/* .chat_window {
+.chat_window {
     width: calc(100% - 20px);
     max-width: 800px;
     height: 500px;
@@ -10,4 +10,4 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     background-color: #f8f8f8;
     overflow: hidden;
-} */
+}
