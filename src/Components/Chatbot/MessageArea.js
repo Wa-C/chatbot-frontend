@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import './MessageArea.css'
-import {Message} from "./Message";
+import Message from "./Message";
 
 function MessageArea(props) {
 

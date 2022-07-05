@@ -1,7 +1,7 @@
 .chat_window {
     width: calc(100% - 20px);
     max-width: 500px;
-    height: 510px;
+    height: 500px;
     border-radius: 35px;
     margin: 30px auto;
     left: 50%;

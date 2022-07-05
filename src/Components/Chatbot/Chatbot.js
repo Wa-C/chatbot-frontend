@@ -10,7 +10,7 @@ const socket = io("http://localhost:5000");
 
 function Chatbot() {
     /*
-      Handle messages
+      Main state to store messages
      */
     const [messages, setMessages] = useState([{
         text: "Hello, i am AI Chatbot, I help you to take doctor's appointment",
