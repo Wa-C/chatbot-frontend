@@ -3,7 +3,8 @@
     max-width: 500px;
     height: 500px;
     border-radius: 35px;
-    margin: 30px auto;
+    margin: 200px auto;
+    
     left: 50%;
     top: 30%;
     box-shadow: 0 11px 23px rgba(0, 0, 0, 0.175);
