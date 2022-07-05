@@ -3,38 +3,51 @@
     overflow: hidden;
     margin-bottom: 20px;
     transition: all 0.5s linear;
-    opacity: 0;
+    
 }
 #messages .message.left .avatar {
-    background-color: #f5886e;
+    /* background-color: #f5886e; */
     float: left;
+    margin-left:5px;
+    background-image: url("images/chatbot-4071274_1920.jpg");
+    background-size: cover;
+    
+   
+    
 }
 #messages .message.left .text_wrapper {
-    background-color: #ffe6cb;
-    margin-left: 20px;
+    background-color: #6c5381;
+    margin-left: 5px;
+    border-radius: 50px;
+    position: relative;
+    opacity: 0.7;
+   
 }
-#messages .message.left .text_wrapper::after, #messages .message.left .text_wrapper::before {
+/* #messages .message.left .text_wrapper::after, #messages .message.left .text_wrapper::before {
     right: 100%;
     border-right-color: #ffe6cb;
-}
+} */
 #messages .message.left .text {
-    color: #c48843;
+    color: #ffffff;
 }
 #messages .message.right .avatar {
-    background-color: #fdbf68;
+    /* background-color: #fdbf68; */
     float: right;
+    background-image: url("images/download.png");
+    background-size: cover;
+    
 }
 #messages .message.right .text_wrapper {
-    background-color: #c7eafc;
+    background-color: #9ebfcf;
     margin-right: 20px;
     float: right;
+    border-radius: 50px;
+    opacity: 0.7;
 }
-#messages .message.right .text_wrapper::after, #messages .message.right .text_wrapper::before {
-    left: 100%;
-    border-left-color: #c7eafc;
-}
+
 #messages .message.right .text {
     color: #45829b;
+    
 }
 #messages .message.appeared {
     opacity: 1;
@@ -47,13 +60,13 @@
 }
 #messages .message .text_wrapper {
     display: inline-block;
-    padding: 20px;
+    padding: 15px;
     border-radius: 6px;
-    width: calc(100% - 85px);
+    width: calc(100% - 80px);
     min-width: 100px;
     position: relative;
 }
-#messages .message .text_wrapper::after, #messages .message .text_wrapper:before {
+/* #messages .message .text_wrapper::after, #messages .message .text_wrapper:before {
     top: 18px;
     border: solid transparent;
     content: " ";
@@ -61,7 +74,7 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-}
+} */
 #messages .message .text_wrapper::after {
     border-width: 13px;
     margin-top: 0px;

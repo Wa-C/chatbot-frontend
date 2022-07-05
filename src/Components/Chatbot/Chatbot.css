@@ -1,13 +1,13 @@
 .chat_window {
     width: calc(100% - 20px);
-    max-width: 800px;
-    height: 500px;
-    border-radius: 10px;
+    max-width: 500px;
+    height: 510px;
+    border-radius: 35px;
     margin: 30px auto;
     left: 50%;
     top: 30%;
-    transform: translateX(0%) translateY(0%);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f8f8f8;
+    box-shadow: 0 11px 23px rgba(0, 0, 0, 0.175);
+    background-image: url("https://picsum.photos/1000/550");
     overflow: hidden;
+    background-repeat: no-repeat;
 }
